@@ -1,0 +1,21 @@
+1. Cummunication: FastAPI HTTP for REST; WebSockets for real-time subscriptions.
+
+2. Event bus: Used asyncio.Queue
+
+3. Persistence: Used SQLite with minimal schema
+
+4. Session management: In-memory sessions with simple room model, no other session management.
+
+5. Mocked AI agent: Used an Agent class (abstract base) with a rule-based implementation that reacts to certain keywords.
+
+6. Things that didn't implement due to time constrains:
+
+- Authentication and security related didn't implement, no user auth check on server side.
+- Very simple client script, no fancy front-end UI client.
+- Error handling very minimal.
+- Message schema and validation very simple.
+- Scaling, not very good for scaling, replace with Redis or Kafka will be better.
+- Concurrentcy consideration, not implemented, in-memory queue could grow very fast.
+- pytest only covers simple Event bus publishing test
+
+7. Architecture diagram is in file: "mvp_chat_service_architecture.png" (created using lucidchart)
