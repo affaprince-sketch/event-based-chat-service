@@ -33,7 +33,7 @@ class MockAgent(Agent):
         user = data.get("user", "anonymous")
 
         # Rule: greeting
-        if any(w in text for w in ["hello", "hi", "hey"]):
+        if any(w in text for w in ["hello", "hi", "hey", "Yo"]):
             resp = {
                 "type": "message",
                 "data": {
