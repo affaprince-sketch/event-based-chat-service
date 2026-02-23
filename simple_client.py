@@ -5,7 +5,8 @@ import aiohttp
 import websockets
 
 REST_URL = "http://localhost:8000"
-WS_URL = "ws://localhost:8000/ws?user={user}&room={room}"
+#WS_URL = "ws://localhost:8000/ws?user={user}&room={room}"
+WS_URL = "ws://event-based-chat-service-h4eue8fbcyf8bjam.canadacentral-01.azurewebsites.net:8000/ws?user={user}&room={room}"
 
 async def ws_listener(user="john", room="default"):
     uri = WS_URL.format(user=user, room=room)
